@@ -315,7 +315,7 @@ button:hover:before {
         .contact-address {
             margin-top: 10px;
             cursor: pointer;
-            color: blue;
+            color: white;
             text-decoration: none; /* Initially, no underline */
         }
 
