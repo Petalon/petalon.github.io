@@ -58,7 +58,6 @@
         
 
     <!-- CA  -->    
-<!-- CA Section -->
 <div class="coin-container">
     <p id="contact-address" class="contact-address" onclick="copyContactAddress()">CA: 9NjhtzNvDVWY62HRJUGRLKrpHcNRFt1F1kZG6rztCKKN</p>
 </div>
@@ -76,13 +75,7 @@
             contactAddressElement.textContent = "Copied!";
 
             // Revert back to the original text after 2 seconds
-            setTimeout(() => {
-                contactAddressElement.textContent = originalText;
-            }, 2000);
-        }).catch(err => {
-            alert('Error copying text: ' + err);
-        });
-    }
+    };
 </script>
                        
         <!-- GIF 
