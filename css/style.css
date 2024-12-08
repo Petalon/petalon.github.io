@@ -318,14 +318,13 @@ button:hover:before {
     margin-top: 20px;
 }
 
-/* Button styling for the contact address */
+/* Contact address text styling */
 .contact-address {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #333; /* Dark background for the button */
+    background-color: #333; /* Dark background for the text container */
     color: white; /* Text color */
     border-radius: 8px;
-    border: none;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
@@ -333,17 +332,10 @@ button:hover:before {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Optional label styling */
-.contact-label {
-    font-weight: bold;
-    color: white;
-    margin-bottom: 5px;
-}
-
-/* Hover effect: enlarge and highlight */
+/* Hover effect: enlarge slightly */
 .contact-address:hover {
-    transform: scale(1.2); /* Enlarges the button */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds shadow effect */
+    transform: scale(1.1); /* Slight enlargement on hover */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
 }
 
 
