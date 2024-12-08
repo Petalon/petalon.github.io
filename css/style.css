@@ -123,13 +123,6 @@ h1 {
   white-space: nowrap;
   overflow: hidden;
   position: absolute;
-    background-color: black; /* Black background */
-    position: relative;
-    height: 50px; /* Banner height */
-    border-top: 2px solid white; /* Top border */
-    border-bottom: 2px solid white; /* Bottom border */
-    display: flex;
-    align-items: center; /* Center the text vertically */
 }
 
 .marquee span {
