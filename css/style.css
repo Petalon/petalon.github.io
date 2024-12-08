@@ -322,8 +322,8 @@ button:hover:before {
 .contact-address {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #333; /* Dark background for the text container */
-    color: white; /* Text color */
+    background-color: #ffffff; /* Dark background for the text container */
+    color: black; /* Text color */
     border-radius: 8px;
     font-size: 1rem;
     font-weight: bold;
