@@ -312,6 +312,7 @@ button:hover:before {
 
 .socials-links a {
     margin: 0 10px;
+    text-decoration: none; /* Removes underline from links */
 }
 
 .socials-links img {
