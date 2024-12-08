@@ -100,7 +100,7 @@ h1 {
 .banner {
     width: 100vw; /* Full viewport width */
     background-color: black; /* Black background */
-    overflow: hidden; /* Hide text outside the banner */
+    overflow: hidden; /* Hide text outside the visible area */
     position: relative;
     height: 50px; /* Banner height */
     border-top: 2px solid white; /* Top border */
@@ -115,15 +115,15 @@ h1 {
     color: white; /* White text */
     font-size: 1.5rem; /* Adjust font size */
     font-weight: bold; /* Bold text */
-    animation: scroll-left 8s linear infinite; /* Continuous left-to-right scrolling */
+    animation: scroll-infinite 10s linear infinite; /* Continuous scrolling */
 }
 
-/* Animation for Infinite Scrolling */
-@keyframes scroll-left {
-    0% {
-        transform: translateX(100%); /* Start completely offscreen to the right */
+/* Smooth Infinite Scrolling Animation */
+@keyframes scroll-infinite {
+    from {
+        transform: translateX(0); /* Start position */
     }
-    100% {
-        transform: translateX(-100%); /* End completely offscreen to the left */
+    to {
+        transform: translateX(-100%); /* Move to the left by one full width of the content */
     }
 }
