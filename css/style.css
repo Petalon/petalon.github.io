@@ -117,7 +117,7 @@ h1 {
     border: 2px solid #ddd;
 }
 
-/* Full-width Scrolling Banner Styles */
+/*  Banner Styles */
 .banner {
     width: 100vw; /* Full viewport width */
     background-color: black; /* Black background */
@@ -143,10 +143,10 @@ h1 {
 /* Animation for Infinite Scrolling */
 @keyframes scroll-left {
     0% {
-        transform: translateX(100%); /* Start completely offscreen to the right */
+        transform: translateX(0); /* Start with the text fully visible */
     }
     100% {
-        transform: translateX(-100%); /* End completely offscreen to the left */
+        transform: translateX(-100%); /* Scroll the text off to the left */
     }
 }
 
