@@ -86,16 +86,18 @@
         <!-- LOADER SCRIPT -->
 <script>
   window.addEventListener("load", function () {
-    // Wait for 2 seconds before making the website visible
+    // Wait for 2 seconds before fading in the website
     setTimeout(function () {
-      // Add a class to make the website fade in
+      // Hide preloader after 2 seconds
+      document.getElementById("preloader").style.visibility = "hidden"; // Hide the preloader
+      // Enable the website fade-in
       document.body.classList.add("fade-in");
-
-      // Optionally, you can hide the preloader after fade-in
-      // setTimeout(function () {
-      //   document.getElementById("preloader").style.visibility = "hidden";
-      // }, 1000); // Hide after 1 second for smooth transition
-    }, 2000); // Wait 2 seconds before fading in the website
+      document.body.style.visibility = "visible"; // Show body content
+      setTimeout(function () {
+        document.body.classList.add("visible"); // Make the website fade in smoothly
+        document.body.style.overflow = "auto"; // Enable scrolling
+      }, 100); // Trigger the fade-in transition after 100ms
+    }, 2000); // Wait for 2 seconds before starting the fade-in
   });
 </script>
         
