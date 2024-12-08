@@ -260,13 +260,31 @@ button:hover:before {
 }
 
 /* Spinner styles */
+/* Preloader styles */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000; /* Set the background to black */
+  z-index: 9999; /* Make sure it overlays everything */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible; /* Ensure it is visible at the start */
+  transition: opacity 1s ease-out, visibility 0s 1s; /* Smooth fade-out transition */
+}
+
+/* Spinner styles */
 .spinner {
   border: 8px solid #f3f3f3; /* Light border */
   border-top: 8px solid #ffffff; /* White spinner top */
   border-radius: 50%;
   width: 80px; /* Larger size for better visibility */
   height: 80px; /* Larger size for better visibility */
-  animation: spin 1.5s linear infinite; /* Slower spin for better visibility */
+  animation: spin 1.5s linear infinite; /* Slow spin for better visibility */
 }
 
 /* Keyframe animation for spinner */
@@ -282,4 +300,5 @@ button:hover:before {
 /* Ensure body content is hidden until preloader is hidden */
 body {
   visibility: hidden; /* Hide the body content initially */
+  overflow: hidden; /* Prevent scrolling during loading */
 }
