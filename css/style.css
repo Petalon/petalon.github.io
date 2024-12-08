@@ -245,75 +245,99 @@ button:hover:before {
 
 
 /* Preloader styles */
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0:
+    background-color: #242f3f;
+    
+.card {
+  /* color used to softly clip top and bottom of the .words container */
+  --bg-color: #212121;
+  background-color: var(--bg-color);
+  padding: 1rem 2rem;
+  border-radius: 1.25rem;
+}
+.loader {
+  color: rgb(124, 124, 124);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 40px;
+  padding: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+}
+
+.words {
+  overflow: hidden;
+  position: relative;
+}
+.words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+  );
+  z-index: 20;
+}
+
+.word {
+  display: block;
   height: 100%;
-  background: #000000; /* Set the background to black */
-  z-index: 9999; /* Make sure it overlays everything */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-  visibility: visible; /* Ensure it is visible at the start */
-  transition: opacity 1s ease-out, visibility 0s 1s; /* Smooth fade-out transition */
+  padding-left: 6px;
+  color: #956afa;
+  animation: spin_4991 4s infinite;
 }
 
-/* Better visible spinner: animated dots */
-.spinner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 50px; /* Size of the spinner */
-}
-
-.spinner div {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  animation: bounce 1.2s infinite ease-in-out;
-}
-
-.spinner div:nth-child(1) {
-  animation-delay: -0.4s;
-}
-
-.spinner div:nth-child(2) {
-  animation-delay: -0.2s;
-}
-
-.spinner div:nth-child(3) {
-  animation-delay: 0s;
-}
-
-/* Bounce animation for the dots */
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
+@keyframes spin_4991 {
+  10% {
+    -webkit-transform: translateY(-102%);
+    transform: translateY(-102%);
   }
-  40% {
-    transform: translateY(-15px);
+
+  25% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
   }
+
+  35% {
+    -webkit-transform: translateY(-202%);
+    transform: translateY(-202%);
+  }
+
+  50% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+
   60% {
-    transform: translateY(-7px);
+    -webkit-transform: translateY(-302%);
+    transform: translateY(-302%);
   }
-}
 
-/* Ensure body content is hidden until preloader is hidden */
-body {
-  visibility: hidden; /* Hide the body content initially */
-  overflow: hidden; /* Prevent scrolling during loading */
-}
+  75% {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
 
-/* Smooth transition when the page content fades in */
-.fade-in {
-  opacity: 0;
-  transition: opacity 1s ease-in;
-}
+  85% {
+    -webkit-transform: translateY(-402%);
+    transform: translateY(-402%);
+  }
 
-.fade-in.visible {
-  opacity: 1;
+  100% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
 }
