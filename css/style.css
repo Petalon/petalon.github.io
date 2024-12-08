@@ -190,3 +190,23 @@ h1 {
     );
 }
 
+
+/* Disclaimer Styles */
+.disclaimer {
+  position: fixed;
+  bottom: 10px;  /* Position 10px from the bottom */
+  right: 10px;   /* Position 10px from the right */
+  font-size: 0.8rem;  /* Small text */
+  color: white;  /* White text for visibility */
+  font-family: Arial, sans-serif;  /* Font for readability */
+  text-align: right;  /* Align text to the right */
+  background-color: rgba(0, 0, 0, 0.6);  /* Slight black background for contrast */
+  padding: 8px 12px;  /* Small padding around the text */
+  border-radius: 5px;  /* Rounded corners */
+  opacity: 0.8;  /* Slight transparency */
+}
+
+/* Make it slightly more readable on hover (optional) */
+.disclaimer:hover {
+  opacity: 1;
+}
