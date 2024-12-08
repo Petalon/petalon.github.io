@@ -95,3 +95,33 @@ h1 {
     height: auto;
     border-radius: 10px;
 }
+
+/* Scrolling Banner Styles */
+.banner {
+    width: 100%;
+    background-color: black;
+    border: 2px solid white; /* Add border to the banner */
+    overflow: hidden; /* Hide overflowing text */
+    position: relative;
+    height: 50px; /* Set banner height */
+}
+
+.banner-content {
+    display: inline-block;
+    white-space: nowrap;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: scroll 10s linear infinite; /* Infinite scrolling animation */
+    position: absolute;
+}
+
+/* Animation for the scrolling effect */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
