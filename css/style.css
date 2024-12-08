@@ -290,11 +290,7 @@ button:hover:before {
             margin-top: 20px;
         }
 
-        .coin-image {
-            width: 200px; /* Adjust the size of the coin image */
-            height: auto;
-        }
-
+       
         .contact-address {
             margin-top: 10px;
             cursor: pointer;
