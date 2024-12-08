@@ -284,3 +284,25 @@ button:hover:before {
   animation: animate8345 9s linear infinite;
   font-weight: bold;
 }
+/* CA */
+.coin-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .coin-image {
+            width: 200px; /* Adjust the size of the coin image */
+            height: auto;
+        }
+
+        .contact-address {
+            margin-top: 10px;
+            cursor: pointer;
+            color: blue;
+            text-decoration: none; /* Initially, no underline */
+        }
+
+        /* Hover effect for the contact address */
+        .contact-address:hover {
+            text-decoration: underline; /* Underline the text when hovered */
+        }
