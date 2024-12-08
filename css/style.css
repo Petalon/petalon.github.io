@@ -192,8 +192,8 @@ button:hover:before {
   width: 0.1em;
   height: 1em;
   background: linear-gradient(#f9ed9b, #a76d23);
-  margin: auto;
-  position: absolute;
+  margin: 20px auto; /* Centers the coin and adds space around it */
+  position: relative; /* Change from absolute to relative to keep it in the normal document flow */
   top: 0;
   left: 0;
   right: 0;
