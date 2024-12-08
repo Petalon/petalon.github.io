@@ -58,27 +58,26 @@
         
 
     <!-- CA  -->    
+<!-- CA Section -->
 <div class="coin-container">
-    <p class="contact-label">CA:</p>
-    <button id="contact-address" class="contact-address" onclick="copyContactAddress()">9NjhtzNvDVWY62HRJUGRLKrpHcNRFt1F1kZG6rztCKKN</button>
+    <p id="contact-address" class="contact-address" onclick="copyContactAddress()">CA: 9NjhtzNvDVWY62HRJUGRLKrpHcNRFt1F1kZG6rztCKKN</p>
 </div>
 
 <script>
     // Function to copy the contact address to clipboard
     function copyContactAddress() {
-        const contactAddress = document.getElementById('contact-address').textContent; // Get the full contact address
+        const contactAddressElement = document.getElementById('contact-address');
+        const contactAddress = contactAddressElement.textContent.slice(4); // Remove "CA: " prefix
+
         navigator.clipboard.writeText(contactAddress).then(() => {
-            const button = document.getElementById('contact-address');
-            const originalText = button.textContent;
+            const originalText = contactAddressElement.textContent;
 
-            // Update button text to "Copied!"
-            button.textContent = "Copied!";
-            button.style.backgroundColor = "#4CAF50"; // Optional: Indicate success with green background
+            // Change text to "Copied!"
+            contactAddressElement.textContent = "Copied!";
 
-            // Revert back to original text after 2 seconds
+            // Revert back to the original text after 2 seconds
             setTimeout(() => {
-                button.textContent = originalText;
-                button.style.backgroundColor = ""; // Reset background color
+                contactAddressElement.textContent = originalText;
             }, 2000);
         }).catch(err => {
             alert('Error copying text: ' + err);
