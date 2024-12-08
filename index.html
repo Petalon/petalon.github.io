@@ -66,16 +66,17 @@
     // Function to copy the contact address to clipboard
     function copyContactAddress() {
         const contactAddressElement = document.getElementById('contact-address');
-        const contactAddress = contactAddressElement.textContent.slice(4); // Remove "CA: " prefix
+        const originalContactAddress = "CA: 9NjhtzNvDVWY62HRJUGRLKrpHcNRFt1F1kZG6rztCKKN"; // Keep original address
 
-        navigator.clipboard.writeText(contactAddress).then(() => {
-            const originalText = contactAddressElement.textContent;
-
-            // Change text to "Copied!"
-            contactAddressElement.textContent = "Copied!";
-
-            // Revert back to the original text after 2 seconds
-    };
+        navigator.clipboard.writeText(originalContactAddress.slice(4)) // Copy address without "CA: "
+            .then(() => {
+                // Change text to "Copied!"
+                contactAddressElement.textContent = "Copied!";
+            })
+            .catch(err => {
+                alert('Error copying text: ' + err);
+            });
+    }
 </script>
                        
         <!-- GIF 
