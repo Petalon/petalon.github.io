@@ -55,7 +55,20 @@
 </svg></div>
 </div>
 
-        
+        <!-- CA -->
+<p id="contact-address" class="contact-address" onclick="copyContactAddress()">CA: 9NjhtzNvDVWY62HRJUGRLKrpHcNRFt1F1kZG6rztCKKN</p>
+
+        <script>
+        // Function to copy the contact address to clipboard
+        function copyContactAddress() {
+            const contactAddress = document.getElementById('contact-address').textContent.slice(4); // Remove "CA: " from the text
+            navigator.clipboard.writeText(contactAddress).then(() => {
+                alert('Contact Address copied to clipboard!');
+            }).catch(err => {
+                alert('Error copying text: ' + err);
+            });
+        }
+    </script>
         <!-- GIF 
         <div class="gif-container">
             <img src="images/rock.gif" alt="$ROCK Gif" class="rock-gif">
@@ -84,6 +97,11 @@
                 <img src="images/rock coin.png" alt="Meme 1">
                 <img src="images/rock1.png" alt="Meme 2">
                 <img src="images/therock.gif" alt="Meme 3">
+                <img src="images/rock2.png" alt="Meme 4">
+                <img src="images/rock4.png" alt="Meme 5">
+                <img src="images/rock5.jpg" alt="Meme 6">
+                <img src="images/rockegg.jpg" alt="Meme 7">
+                <img src="images/rocky.jpg" alt="Meme 8">
             </div>
         </div>
 
