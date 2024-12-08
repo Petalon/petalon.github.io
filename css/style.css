@@ -314,22 +314,29 @@ button:hover:before {
 }
 /* CA */
 .coin-container {
-            text-align: center;
-            margin-top: 20px;
-        }
+    text-align: center;
+    margin-top: 20px;
+}
 
-       
-        .contact-address {
-            margin-top: 10px;
-            cursor: pointer;
-            color: white;
-            text-decoration: none; /* Initially, no underline */
-        }
+/* Styling for the Contact Address box */
+.contact-address {
+    display: inline-block; /* Ensures the box is only as wide as the content */
+    padding: 10px 20px; /* Add spacing inside the box */
+    background-color: #333; /* Dark background for the box */
+    color: white; /* Text color */
+    border-radius: 8px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    font-size: 1rem; /* Default font size */
+}
 
-        /* Hover effect for the contact address */
-        .contact-address:hover {
-            text-decoration: underline; /* Underline the text when hovered */
-        }
+/* Hover effect: enlarge and highlight */
+.contact-address:hover {
+    transform: scale(1.2); /* Enlarges the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds shadow effect */
+    text-decoration: none; /* Ensure no underline even on hover */
+}
+
 
 
  /* SOCIALS */
