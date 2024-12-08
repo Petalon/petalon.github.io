@@ -9,8 +9,19 @@
 </head>
 <body>
     <!-- LOADER -->
-<div id="preloader">
-  <div class="spinner"></div>
+<div class="loader-wrapper">
+<div class="card">
+  <div class="loader">
+    <p>loading</p>
+    <div class="words">
+      <span class="word">buttons</span>
+      <span class="word">forms</span>
+      <span class="word">switches</span>
+      <span class="word">cards</span>
+      <span class="word">buttons</span>
+    </div>
+  </div>
+</div>
 </div>
     <!-- LINKS -->
     <div class="navbar">
@@ -84,22 +95,6 @@
 </div>
 
         <!-- LOADER SCRIPT -->
-<script>
-  window.addEventListener("load", function () {
-    // Wait for 2 seconds before fading in the website
-    setTimeout(function () {
-      // Hide preloader after 2 seconds
-      document.getElementById("preloader").style.visibility = "hidden"; // Hide the preloader
-      // Enable the website fade-in
-      document.body.classList.add("fade-in");
-      document.body.style.visibility = "visible"; // Show body content
-      setTimeout(function () {
-        document.body.classList.add("visible"); // Make the website fade in smoothly
-        document.body.style.overflow = "auto"; // Enable scrolling
-      }, 100); // Trigger the fade-in transition after 100ms
-    }, 2000); // Wait for 2 seconds before starting the fade-in
-  });
-</script>
         
 </body>
 </html>
