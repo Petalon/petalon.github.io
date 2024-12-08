@@ -10,28 +10,22 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px 0;
-    background-color: #1a1a1a;
+    justify-content: space-between; /* Space the buttons evenly */
+    padding: 20px 10%;
+    background-color: black;
     position: sticky;
     top: 0;
-    z-index: 1000;
 }
 
-.btn {
-    text-decoration: none;
+.navbar a {
     color: white;
-    border: 2px solid white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 18px;
+    transition: border-bottom 0.3s ease;
 }
 
-.btn:hover {
-    background-color: white;
-    color: black;
+.navbar a:hover {
+    border-bottom: 2px solid white; /* Underline appears on hover */
 }
 
 .content {
