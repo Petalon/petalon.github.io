@@ -7,11 +7,21 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="images/rock coin.png">
 </head>
-<body>
+<body class="preload">
     <!-- LOADER -->
 <div class="loader-wrapper">
-<div class="loader">loading...</div>
-</div>
+    <div class="loader">loading...</div>
+  </div>
+
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(window).on("load", function() {
+      $(".loader-wrapper").fadeOut("slow");
+      $("body").removeClass("preload"); // Remove the preload class to allow scrolling
+    });
+  </script>
+
+    
     <!-- LINKS -->
     <div class="navbar">
         <a href="https://x.com/rockcoinxsol" target="_blank">TWITTER</a>
@@ -76,12 +86,6 @@
                 <img src="meme3.jpg" alt="Meme 3">
             </div>
         </div>
-
-<script>
-    $(window).on("load", function(){
-        $(".loader-wrapper").fadeOut("slow");
-    });
-</script>
 
 <div class="disclaimer">
   Investing in cryptocurrency assets is risky and you should use your best judgement. Nothing on this website is financial advice. <br><br>
