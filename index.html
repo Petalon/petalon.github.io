@@ -84,12 +84,16 @@
 </div>
 
         <!-- LOADER SCRIPT -->
-    <script>
+  <script>
   window.addEventListener("load", function () {
     // Wait for 2 seconds before hiding the preloader
     setTimeout(function () {
-      document.getElementById("preloader").style.display = "none";
-    }, 500); // 2000ms = 2 seconds
+      document.getElementById("preloader").style.opacity = "0"; // Fade out preloader
+      setTimeout(function () {
+        document.getElementById("preloader").style.display = "none"; // Remove preloader from display
+        document.body.style.visibility = "visible"; // Show body content after preloader fades out
+      }, 1000); // 1 second delay to match the fade-out effect
+    }, 300); // Wait 2 seconds before starting to fade out
   });
 </script>
         
