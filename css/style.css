@@ -15,6 +15,7 @@ body {
     background-color: black;
     position: sticky;
     top: 0;
+    z-index: 9999; /* Ensure navbar stays above other elements */
 }
 
 .navbar a {
@@ -200,6 +201,7 @@ button:hover:before {
   bottom: 0;
   animation: rotate_4001510 7s infinite linear;
   transform-style: preserve-3d;
+  z-index: 1; /* Ensure coin stays behind navbar */
 }
 
 .coin .side, .coin:before, .coin:after {
