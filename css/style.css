@@ -121,9 +121,9 @@ h1 {
 /* Animation for Infinite Scrolling */
 @keyframes scroll-left {
     0% {
-        transform: translateX(100%); /* Start completely offscreen to the right */
+        transform: translateX(-100%); /* Start completely offscreen to the right */
     }
     100% {
-        transform: translateX(-100%); /* End completely offscreen to the left */
+        transform: translateX(100%); /* End completely offscreen to the left */
     }
 }
