@@ -186,12 +186,14 @@ button:hover:before {
   transform: translateX(15em);
 }
 */
+/* From Uiverse.io by JohnnyCSilva */ 
 .coin {
   font-size: 200px;
   width: 0.1em;
   height: 1em;
-  background: linear-gradient(#faa504, #141001);
+  background: linear-gradient(#7b7b7b, #141001);
   margin: auto;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -202,6 +204,7 @@ button:hover:before {
 
 .coin .side, .coin:before, .coin:after {
   content: "";
+  position: absolute;
   width: 1em;
   height: 1em;
   overflow: hidden;
@@ -221,7 +224,7 @@ button:hover:before {
 }
 
 .coin:before, .coin:after {
-  background: linear-gradient(#faa504, #141001);
+  background: linear-gradient(#7b7b7b, #141001);
   backface-visibility: hidden;
   transform: rotateY(90deg);
 }
@@ -239,4 +242,5 @@ button:hover:before {
 .svg_back {
   transform: scaleX(-1);
 }
+
 
