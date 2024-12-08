@@ -191,7 +191,7 @@ button:hover:before {
   font-size: 200px;
   width: 0.1em;
   height: 1em;
-  background: linear-gradient(#7b7b7b, #141001);
+  background: linear-gradient(#faa504, #141001);
   margin: auto;
   position: absolute;
   top: 0;
@@ -224,7 +224,7 @@ button:hover:before {
 }
 
 .coin:before, .coin:after {
-  background: linear-gradient(#7b7b7b, #141001);
+  background: linear-gradient(#faa504, #141001);
   backface-visibility: hidden;
   transform: rotateY(90deg);
 }
