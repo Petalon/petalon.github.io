@@ -74,27 +74,47 @@ h1 {
     margin: 20px 0; /* Add spacing between paragraphs */
     line-height: 1.6;
 }
-
+/* MEMES */
+/* Style for the memes section */
 .memes-section {
     margin-top: 50px;
+    text-align: center; /* Centers the section */
 }
 
 .memes-section h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
+/* Container for meme images */
 .memes-scroller {
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto; /* Allows horizontal scrolling */
     gap: 20px;
     padding: 10px;
+    scroll-snap-type: x mandatory; /* Smooth scrolling effect */
+    scroll-behavior: smooth;
+    justify-content: center; /* Centers the meme images horizontally */
 }
 
+/* Individual meme images */
 .memes-scroller img {
-    width: 200px;
-    height: auto;
+    width: 250px; /* Adjust the size of the images */
+    height: 250px; /* Consistent height for all images */
+    object-fit: cover; /* Ensures the aspect ratio of the images is preserved without squishing */
     border-radius: 10px;
+    transition: transform 0.3s ease; /* Adds a transition effect */
+}
+
+/* Hover effect for images */
+.memes-scroller img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+/* Optional: Adding a border around images for better separation */
+.memes-scroller img {
+    border: 2px solid #ddd;
 }
 
 /* Full-width Scrolling Banner Styles */
