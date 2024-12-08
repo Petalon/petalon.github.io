@@ -148,7 +148,7 @@ h1 {
   opacity: 1;
 }
 
-/* From Uiverse.io by adamgiebl */ 
+/* Needed for the pseudo-element 
 button {
   --green: #1BFD9C;
   font-size: 15px;
@@ -185,7 +185,7 @@ button:before {
 button:hover:before {
   transform: translateX(15em);
 }
-
+*/
 .coin {
   font-size: 200px;
   width: 0.1em;
