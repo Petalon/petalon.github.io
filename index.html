@@ -58,19 +58,33 @@
         
 
     <!-- CA  -->    
-<p id="contact-address" class="contact-address" onclick="copyContactAddress()">CA: 9NjhtzNvDVWY62HRJUGRLKrpHcNRFt1F1kZG6rztCKKN</p>
+<div class="coin-container">
+    <p class="contact-label">CA:</p>
+    <button id="contact-address" class="contact-address" onclick="copyContactAddress()">9NjhtzNvDVWY62HRJUGRLKrpHcNRFt1F1kZG6rztCKKN</button>
+</div>
 
-        <script>
-        // Function to copy the contact address to clipboard
-        function copyContactAddress() {
-            const contactAddress = document.getElementById('contact-address').textContent.slice(4); // Remove "CA: " from the text
-            navigator.clipboard.writeText(contactAddress).then(() => {
-                alert('Contact Address copied to clipboard!');
-            }).catch(err => {
-                alert('Error copying text: ' + err);
-            });
-        }
-    </script>
+<script>
+    // Function to copy the contact address to clipboard
+    function copyContactAddress() {
+        const contactAddress = document.getElementById('contact-address').textContent; // Get the full contact address
+        navigator.clipboard.writeText(contactAddress).then(() => {
+            const button = document.getElementById('contact-address');
+            const originalText = button.textContent;
+
+            // Update button text to "Copied!"
+            button.textContent = "Copied!";
+            button.style.backgroundColor = "#4CAF50"; // Optional: Indicate success with green background
+
+            // Revert back to original text after 2 seconds
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.backgroundColor = ""; // Reset background color
+            }, 2000);
+        }).catch(err => {
+            alert('Error copying text: ' + err);
+        });
+    }
+</script>
                        
         <!-- GIF 
         <div class="gif-container">
