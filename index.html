@@ -95,14 +95,17 @@
 </div>
 
         <!-- LOADER SCRIPT -->
-        <script>
-  window.addEventListener("load", function () {
-    // Wait for 2 seconds before hiding the preloader
-    setTimeout(function () {
-      document.getElementById("preloader").style.display = "none";
-    }, 2000); // 2000ms = 2 seconds
-  });
-</script>
+       <script>
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        document.getElementById("preloader").style.opacity = "0"; // Fade out loader
+        setTimeout(function() {
+          document.getElementById("preloader").style.display = "none"; // Remove loader completely after fade
+          document.getElementById("main-content").style.visibility = "visible"; // Show main content
+        }, 500); // Ensure loader fades out before hiding completely
+      }, 2000); // Delay for preloader
+    });
+  </script>
         
 </body>
 </html>
