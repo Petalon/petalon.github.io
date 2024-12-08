@@ -302,3 +302,24 @@ button:hover:before {
         .contact-address:hover {
             text-decoration: underline; /* Underline the text when hovered */
         }
+
+
+ /* SOCIALS */
+.socials-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.socials-links a {
+    margin: 0 10px;
+}
+
+.socials-links img {
+    width: 40px; /* Adjust the size of the icons */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.socials-links img:hover {
+    transform: scale(1.1); /* Adds a hover effect */
+}
