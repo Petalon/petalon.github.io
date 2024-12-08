@@ -128,85 +128,33 @@ h1 {
     }
 }
 
-/* MEMES */
-.wrapper {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+/* Base Styles for the page content */
+.content {
+  min-height: 100vh; /* Ensures the page has enough height */
+  padding-bottom: 50px;  /* Extra padding at the bottom to prevent overlap with disclaimer */
 }
 
-.inner {
-  --w: 100px;
-  --h: 150px;
-  --translateZ: calc((var(--w) + var(--h)) + 0px);
-  --rotateX: -15deg;
-  --perspective: 1000px;
-  position: absolute;
-  width: var(--w);
-  height: var(--h);
-  top: 25%;
-  left: calc(50% - (var(--w) / 2) - 2.5px);
-  z-index: 2;
-  transform-style: preserve-3d;
-  transform: perspective(var(--perspective));
-  animation: rotating 20s linear infinite; /* */
-}
-@keyframes rotating {
-  from {
-    transform: perspective(var(--perspective)) rotateX(var(--rotateX))
-      rotateY(0);
-  }
-  to {
-    transform: perspective(var(--perspective)) rotateX(var(--rotateX))
-      rotateY(1turn);
-  }
-}
-
-.card {
-  position: absolute;
-  border: 2px solid rgba(var(--color-card));
-  border-radius: 12px;
-  overflow: hidden;
-  inset: 0;
-  transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
-    translateZ(var(--translateZ));
-}
-
-.img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  background: #0000
-    radial-gradient(
-      circle,
-      rgba(var(--color-card), 0.2) 0%,
-      rgba(var(--color-card), 0.6) 80%,
-      rgba(var(--color-card), 0.9) 100%
-    );
-}
-
-
-/* Disclaimer Styles */
+/* Disclaimer at the bottom of the page */
 .disclaimer {
-  position: fixed;
-  bottom: 10px;  /* Position 10px from the bottom */
-  right: 10px;   /* Position 10px from the right */
-  font-size: 0.8rem;  /* Small text */
-  color: white;  /* White text for visibility */
-  font-family: Arial, sans-serif;  /* Font for readability */
-  text-align: right;  /* Align text to the right */
+  position: relative;
+  font-size: 0.8rem;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
   background-color: rgba(0, 0, 0, 0.6);  /* Slight black background for contrast */
-  padding: 8px 12px;  /* Small padding around the text */
-  border-radius: 5px;  /* Rounded corners */
-  opacity: 0.8;  /* Slight transparency */
+  padding: 8px 12px;
+  border-radius: 5px;
+  opacity: 0.8;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  z-index: 10;
 }
 
-/* Make it slightly more readable on hover (optional) */
+/* Hover effect for readability */
 .disclaimer:hover {
   opacity: 1;
 }
+
