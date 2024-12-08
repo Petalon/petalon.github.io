@@ -9,20 +9,8 @@
 </head>
 <body>
     <!-- LOADER -->
- <div id="preloader">
- <div class="loader">
-    <div class="bar1"></div>
-    <div class="bar2"></div>
-    <div class="bar3"></div>
-    <div class="bar4"></div>
-    <div class="bar5"></div>
-    <div class="bar6"></div>
-    <div class="bar7"></div>
-    <div class="bar8"></div>
-    <div class="bar9"></div>
-    <div class="bar10"></div>
-    <div class="bar11"></div>
-    <div class="bar12"></div>
+<div id="preloader">
+  <div class="spinner"></div>
 </div>
     <!-- LINKS -->
     <div class="navbar">
@@ -96,17 +84,14 @@
 </div>
 
         <!-- LOADER SCRIPT -->
-       <script>
-    window.addEventListener("load", function () {
-      setTimeout(function () {
-        document.getElementById("preloader").style.opacity = "0"; // Fade out loader
-        setTimeout(function() {
-          document.getElementById("preloader").style.display = "none"; // Remove loader completely after fade
-          document.getElementById("main-content").style.visibility = "visible"; // Show main content
-        }, 500); // Ensure loader fades out before hiding completely
-      }, 2000); // Delay for preloader
-    });
-  </script>
+    <script>
+  window.addEventListener("load", function () {
+    // Wait for 2 seconds before hiding the preloader
+    setTimeout(function () {
+      document.getElementById("preloader").style.display = "none";
+    }, 1000); // 2000ms = 2 seconds
+  });
+</script>
         
 </body>
 </html>
