@@ -117,7 +117,7 @@ h1 {
     border: 2px solid #ddd;
 }
 
-/*  Banner Styles */
+/* Full-width Scrolling Banner Styles */
 .banner {
     width: 100vw; /* Full viewport width */
     background-color: black; /* Black background */
@@ -130,9 +130,9 @@ h1 {
     align-items: center; /* Center the text vertically */
 }
 
-/* Container for the scrolling text */
+/* Scrolling content container */
 .banner-content {
-    display: inline-block;
+    display: flex; /* Allow items to be laid out in a single line */
     white-space: nowrap; /* Prevent text from wrapping */
     color: white; /* White text */
     font-size: 1.5rem; /* Adjust font size */
@@ -140,15 +140,22 @@ h1 {
     animation: scroll-left 10s linear infinite; /* Continuous left-to-right scrolling */
 }
 
+/* Duplicate the content seamlessly */
+.banner-content::after {
+    content: attr(data-text); /* Dynamically duplicate the text */
+    margin-left: 20px; /* Optional spacing between duplicates */
+}
+
 /* Animation for Infinite Scrolling */
 @keyframes scroll-left {
     0% {
-        transform: translateX(0); /* Start with the text fully visible */
+        transform: translateX(0); /* Start fully visible */
     }
     100% {
-        transform: translateX(-100%); /* Scroll the text off to the left */
+        transform: translateX(-100%); /* Move everything out of view */
     }
 }
+
 
 /* Disclaimer Styles */
 .disclaimer {
