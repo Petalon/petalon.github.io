@@ -1,1 +1,84 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
 
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+    background-color: #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.content {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.gif-container {
+    margin: 20px auto;
+    max-width: 80%;
+}
+
+.rock-gif {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+.description p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.memes-section {
+    margin-top: 50px;
+}
+
+.memes-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.memes-scroller {
+    display: flex;
+    overflow-x: scroll;
+    gap: 20px;
+    padding: 10px;
+}
+
+.memes-scroller img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
