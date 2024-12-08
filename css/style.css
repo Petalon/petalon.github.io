@@ -118,48 +118,60 @@ h1 {
 }
 
 /* BANNER! */
-.marquee-container {
-  height: 30px;
-  overflow: hidden;
-  line-height: 30px;
-
-  .marquee {
-    top: 0;
-    left: 100%;
-    width: 100%;
+/* Container styles */
+.scrolling-text-container {
+    background-color: #eff5ff;
+    border-radius: 4px;
     overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    animation: marquee 30s linear infinite;
-  }
-
-  .marquee2 {
-    animation-delay: 15s;
-  }
-  b {
-    padding-left: 10px;
-  }
 }
 
-@keyframes marquee {
-  0% {
-    left: 100%;
-  }
-  100% {
-    left: -100%
-  }
-}
-/* Full-width Scrolling Banner Styles */
-.banner {
-    width: 100vw; /* Full viewport width */
-    background-color: black; /* Black background */
-    overflow: hidden; /* Hide text outside the banner */
-    position: relative;
-    height: 50px; /* Banner height */
-    border-top: 2px solid white; /* Top border */
-    border-bottom: 2px solid white; /* Bottom border */
+/* Inner container styles */
+.scrolling-text-inner {
     display: flex;
-    align-items: center; /* Center the text vertically */
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 0;
+}
+
+/* Text styles */
+.scrolling-text {
+    display: flex;
+}
+
+.scrolling-text-item {
+    padding: 0 30px;
+}
+
+/* Apply the animation to the text items */
+.scrolling-text-inner>div {
+    animation: var(--direction) var(--marquee-speed) linear infinite;
+}
+
+/* Pause the animation when a user hovers over it */
+.scrolling-text-container:hover .scrolling-text-inner>div {
+    animation-play-state: paused;
+}
+
+/* Setting the Animation using Keyframes */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
 }
 
 /* Disclaimer Styles */
