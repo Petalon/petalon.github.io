@@ -115,13 +115,3 @@ h1 {
     animation: scroll 10s linear infinite; /* Infinite scrolling animation */
     position: absolute;
 }
-
-/* Animation for the scrolling effect */
-@keyframes scroll {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
