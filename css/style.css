@@ -130,22 +130,23 @@ h1 {
     align-items: center; /* Center the text vertically */
 }
 
+/* Container for the scrolling text */
 .banner-content {
     display: inline-block;
     white-space: nowrap; /* Prevent text from wrapping */
     color: white; /* White text */
     font-size: 1.5rem; /* Adjust font size */
     font-weight: bold; /* Bold text */
-    animation: scroll-left 8s linear infinite; /* Continuous left-to-right scrolling */
+    animation: scroll-left 10s linear infinite; /* Continuous left-to-right scrolling */
 }
 
 /* Animation for Infinite Scrolling */
 @keyframes scroll-left {
     0% {
-        transform: translateX(-100%); /* Start completely offscreen to the right */
+        transform: translateX(100%); /* Start completely offscreen to the right */
     }
     100% {
-        transform: translateX(100%); /* End completely offscreen to the left */
+        transform: translateX(-100%); /* End completely offscreen to the left */
     }
 }
 
