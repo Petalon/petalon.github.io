@@ -131,6 +131,7 @@ h1 {
     font-size: 16px;
     font-weight: 600;
     padding: 8px 0;
+    color: black; 
 }
 
 /* Text styles */
@@ -140,6 +141,7 @@ h1 {
 
 .scrolling-text-item {
     padding: 0 30px;
+    color: black; 
 }
 
 /* Apply the animation to the text items */
