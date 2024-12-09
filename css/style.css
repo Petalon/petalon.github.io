@@ -1,4 +1,6 @@
 /* styles.css */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,900&display=swap");
+
 body {
     margin: 0;
     padding: 0;
@@ -118,59 +120,47 @@ h1 {
 }
 
 /* BANNER! */
-.scrolling-text-container {
-    background-color: #eff5ff;
-    border-radius: 0; /* Remove border radius */
-    overflow: hidden;
-    border-top: 1px solid #000; /* Adjust color and width as needed */
-    border-bottom: 1px solid #000; /* Adjust color and width as needed */
-    width: 100vw; /* Make it full viewport width */
-    margin-left: calc(-50vw + 50%); /* Center the container */
-    position: relative; /* Ensure proper positioning */
+.marquee {
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  height: 40px;
+  width: 455px;
+  border-radius: 22px;
+  box-shadow: 4px 4px 0 #000;
+  overflow: hidden;
+  background: white;
+  white-space: nowrap;
 }
 
-/* Inner container styles */
-.scrolling-text-inner {
-    display: flex;
-    white-space: nowrap;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 8px 0;
+.marquee--inner {
+  display: block;
+  width: 200%;
+  position: absolute;
+  animation: marquee 10s linear infinite;
+  &:hover {
+    animation-play-state: paused;
+    color: red;
+  }
 }
 
-/* Text styles */
-.scrolling-text {
-    display: flex;
+span {
+  float: left;
+  width: 50%;
+  overflow: hidden;
 }
 
-.scrolling-text-item {
-    padding: 0 30px;
-}
-
-/* Apply the animation to the text items */
-.scrolling-text-inner>div {
-    animation: var(--direction) var(--marquee-speed) linear infinite;
-}
-
-/* Setting the Animation using Keyframes */
-@keyframes scroll-left {
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-@keyframes scroll-right {
-    0% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(0%);
-    }
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
 }
 
 /* Disclaimer Styles */
