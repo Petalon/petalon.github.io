@@ -124,7 +124,6 @@ h1 {
 .marquee {
   position: relative;
   width: 100%; /* Make it span the whole page */
-  max-width: 1200px; /* Optional: prevent it from becoming too wide on large screens */
   margin: 0 auto; /* Center the banner */
   overflow: hidden;
   box-sizing: border-box;
@@ -135,7 +134,7 @@ h1 {
   border: 2px solid #000; /* Explicitly set black border */
   border-radius: 22px;
   box-shadow: 4px 4px 0 #000;
-  background: white;
+  background: black;
   white-space: nowrap;
   font-family: "Nunito", sans-serif;
   font-weight: 900;
