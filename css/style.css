@@ -120,19 +120,21 @@ h1 {
 }
 
 /* BANNER! */
+/* BANNER! */
 .marquee {
+  position: relative;
+  width: 100%; /* Make it span the whole page */
+  max-width: 1200px; /* Optional: prevent it from becoming too wide on large screens */
+  margin: 0 auto; /* Center the banner */
   overflow: hidden;
   box-sizing: border-box;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #000;
   height: 40px;
-  width: 455px;
+  border: 2px solid #000; /* Explicitly set black border */
   border-radius: 22px;
   box-shadow: 4px 4px 0 #000;
-  overflow: hidden;
   background: white;
   white-space: nowrap;
   font-family: "Nunito", sans-serif;
@@ -145,15 +147,15 @@ h1 {
   width: 200%;
   position: absolute;
   animation: marquee 10s linear infinite;
-  &:hover {
-    color: red;
-  }
 }
 
-span {
+.marquee--inner:hover {
+  color: red;
+}
+
+.marquee span {
   float: left;
   width: 50%;
-  overflow: hidden;
 }
 
 @keyframes marquee {
