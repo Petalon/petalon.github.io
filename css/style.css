@@ -80,47 +80,91 @@ h1 {
 .memes-section {
     margin-top: 50px;
     text-align: center; /* Centers the section */
+    width: 100%; /* Full width */
+    overflow: hidden; /* Prevent overflow */
 }
 
 .memes-section h2 {
     font-size: 2rem;
     margin-bottom: 20px;
     font-weight: bold;
+    color: #333; /* Optional: add text color */
 }
 
 /* Container for meme images */
 .memes-scroller {
     display: flex;
     overflow-x: auto; /* Allows horizontal scrolling */
+    overflow-y: hidden; /* Prevents vertical scrolling */
+    
+    /* Scrolling and layout properties */
     gap: 20px;
     padding: 10px;
     scroll-snap-type: x mandatory; /* Smooth scrolling effect */
     scroll-behavior: smooth;
-    justify-content: center; /* Centers the meme images horizontally */
-    position: relative; /* Add positioning context */
-    overflow: visible; /* Allow content to overflow */
-    width: 100%; /* Full width of container */
+    
+    /* Alignment */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center;
+    
+    /* Full width and scrolling enhancements */
+    width: 100%; 
+    max-width: 100%;
+    
+    /* Scrollbar customizations */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scrollbar-width: thin; /* Thin scrollbar for Firefox */
+    scrollbar-color: rgba(0,0,0,0.3) transparent; /* Scrollbar color */
+    
+    /* Hide default scrollbar */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.memes-scroller::-webkit-scrollbar {
+    display: none;
 }
 
 /* Individual meme images */
 .memes-scroller img {
-    width: 250px; /* Adjust the size of the images */
-    height: 250px; /* Consistent height for all images */
-    object-fit: cover; /* Ensures the aspect ratio of the images is preserved without squishing */
+    /* Sizing and layout */
+    flex: 0 0 250px; /* Prevent images from growing or shrinking */
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    
+    /* Styling */
     border-radius: 10px;
-    transition: transform 0.3s ease; /* Adds a transition effect */
-    position: relative; /* Ensure proper stacking */
-    z-index: 1; /* Base layer */
+    border: 2px solid #ddd;
+    
+    /* Interactions */
+    transition: transform 0.3s ease;
+    scroll-snap-align: center; /* Snap images to center when scrolling */
+    
+    /* Positioning */
+    margin-right: 20px;
+    cursor: pointer;
 }
 
 /* Hover effect for images */
 .memes-scroller img:hover {
     transform: scale(1.1); /* Slightly enlarge the image on hover */
+    z-index: 10; /* Ensure hover effect is on top */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: add shadow on hover */
 }
 
-/* Optional: Adding a border around images for better separation */
-.memes-scroller img {
-    border: 2px solid #ddd;
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .memes-section h2 {
+        font-size: 1.5rem; /* Smaller font on mobile */
+    }
+    
+    .memes-scroller img {
+        flex: 0 0 200px; /* Smaller images on mobile */
+        width: 200px;
+        height: 200px;
+    }
 }
 
 /* BANNER! */
