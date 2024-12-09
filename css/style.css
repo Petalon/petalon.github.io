@@ -98,8 +98,6 @@ h1 {
     scroll-snap-type: x mandatory; /* Smooth scrolling effect */
     scroll-behavior: smooth;
     justify-content: center; /* Centers the meme images horizontally */
-    position: relative; /* Add positioning context */
-    overflow: visible; /* Allow content to overflow */
 }
 
 /* Individual meme images */
@@ -109,8 +107,6 @@ h1 {
     object-fit: cover; /* Ensures the aspect ratio of the images is preserved without squishing */
     border-radius: 10px;
     transition: transform 0.3s ease; /* Adds a transition effect */
-    position: relative; /* Ensure proper stacking */
-    z-index: 1; /* Base layer */
 }
 
 /* Hover effect for images */
@@ -125,7 +121,6 @@ h1 {
     border: 2px solid #ddd;
 }
 
-/* BANNER! */
 /* BANNER! */
 .marquee {
   position: relative;
