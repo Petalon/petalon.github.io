@@ -80,7 +80,6 @@ h1 {
 .memes-section {
     margin-top: 50px;
     text-align: center; /* Centers the section */
-    overflow: hidden; /* Prevent overall page scrolling */
 }
 
 .memes-section h2 {
@@ -93,7 +92,6 @@ h1 {
 .memes-scroller {
     display: flex;
     overflow-x: auto; /* Allows horizontal scrolling */
-    overflow-y: hidden; /* Prevents vertical scrolling */
     gap: 20px;
     padding: 10px;
     scroll-snap-type: x mandatory; /* Smooth scrolling effect */
@@ -102,14 +100,6 @@ h1 {
     position: relative; /* Add positioning context */
     overflow: visible; /* Allow content to overflow */
     width: 100%; /* Full width of container */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    scrollbar-width: thin; /* Thin scrollbar for Firefox */
-    scrollbar-color: rgba(0,0,0,0.3) transparent; /* Scrollbar color */
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.memes-scroller::-webkit-scrollbar {
-    display: none;
 }
 
 /* Individual meme images */
@@ -121,8 +111,6 @@ h1 {
     transition: transform 0.3s ease; /* Adds a transition effect */
     position: relative; /* Ensure proper stacking */
     z-index: 1; /* Base layer */
-    flex: 0 0 250px; /* Prevent images from growing or shrinking */
-    scroll-snap-align: center; /* Snap images to center when scrolling */
 }
 
 /* Hover effect for images */
