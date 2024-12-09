@@ -131,14 +131,13 @@ h1 {
   align-items: center;
   justify-content: center;
   height: 40px;
-  border: 2px solid #000; /* Explicitly set black border */
-  border-radius: 22px;
-  box-shadow: 4px 4px 0 #000;
   background: black;
   white-space: nowrap;
   font-family: "Nunito", sans-serif;
   font-weight: 900;
   font-style: italic;
+  border-top: 2px solid white; /* White border at the top */
+  border-bottom: 2px solid white; /* White border at the bottom */
 }
 
 .marquee--inner {
