@@ -120,8 +120,13 @@ h1 {
 /* BANNER! */
 .scrolling-text-container {
     background-color: #eff5ff;
-    border-radius: 4px;
+    border-radius: 0; /* Remove border radius */
     overflow: hidden;
+    border-top: 1px solid #000; /* Adjust color and width as needed */
+    border-bottom: 1px solid #000; /* Adjust color and width as needed */
+    width: 100vw; /* Make it full viewport width */
+    margin-left: calc(-50vw + 50%); /* Center the container */
+    position: relative; /* Ensure proper positioning */
 }
 
 /* Inner container styles */
@@ -131,7 +136,6 @@ h1 {
     font-size: 16px;
     font-weight: 600;
     padding: 8px 0;
-    color: black; 
 }
 
 /* Text styles */
@@ -141,7 +145,6 @@ h1 {
 
 .scrolling-text-item {
     padding: 0 30px;
-    color: black; 
 }
 
 /* Apply the animation to the text items */
