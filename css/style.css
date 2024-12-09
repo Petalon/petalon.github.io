@@ -151,7 +151,7 @@ h1 {
 }
 
 .marquee--inner:hover {
-  color: red;
+  color: #ffd700;
 }
 
 .marquee span {
