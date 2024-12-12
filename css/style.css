@@ -168,10 +168,11 @@ h1 {
 }
 
 /* BANNER! */
+/* BANNER! */
 .marquee {
   position: relative;
-  width: 100%; /* Make it span the whole page */
-  margin: 0 auto; /* Center the banner */
+  width: 100%; /* Full width */
+  margin: 0 auto;
   overflow: hidden;
   box-sizing: border-box;
   display: flex;
@@ -183,39 +184,47 @@ h1 {
   font-family: "Nunito", sans-serif;
   font-weight: 900;
   font-style: italic;
-  border-top: 2px solid white; /* White border at the top */
-  border-bottom: 2px solid white; /* White border at the bottom */
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
 }
 
 .marquee--inner {
-  display: block;
-  width: 200%;
-  position: absolute;
+  display: flex; /* Use flexbox to keep items aligned */
+  width: max-content; /* Ensure the content only takes as much space as needed */
+  position: relative; /* Relative for animation */
   animation: marquee 10s linear infinite;
+}
+
+.marquee span {
+  display: flex; /* Flex for spacing */
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* Add space between elements */
 }
 
 .marquee--inner:hover {
   color: #ffd700;
 }
 
-.marquee span {
-  float: left;
-  width: 50%;
-}
-
+/* Animation */
 @keyframes marquee {
   0% {
-    left: 0;
+    transform: translateX(0);
   }
   100% {
-    left: -100%;
+    transform: translateX(-100%);
   }
 }
+
 /* MOBILE */
 @media screen and (max-width: 768px) {
   .marquee {
-    height: 30px; /* Slightly smaller height on mobile */
-    font-size: 0.8rem; /* Smaller font size */
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .marquee--inner {
+    animation-duration: 7s; /* Faster animation for smaller screens */
   }
 }
 
@@ -231,7 +240,7 @@ h1 {
   .desktop-content {
     display: none;
   }
-  
+
   .mobile-content {
     display: block;
   }
