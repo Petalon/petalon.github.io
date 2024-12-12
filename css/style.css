@@ -406,7 +406,7 @@ button:hover:before {
 .coin-container {
     text-align: center;
     margin-top: 20px;
-    margin-bottom: -10px; /* This will cause overlapping—remove or adjust this */
+    margin-bottom: 10px; /* This will cause overlapping—remove or adjust this */
 }
 
 /* Contact address text styling */
