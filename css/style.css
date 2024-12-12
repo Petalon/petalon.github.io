@@ -463,3 +463,13 @@ button:hover:before {
 .socials-links img:hover {
     transform: scale(1.1); /* Adds a hover effect */
 }
+
+
+/*TEST*/
+.ca-section {
+    margin-bottom: 20px; /* Adds space below the CA section */
+}
+
+.banner {
+    margin-top: 20px; /* Adds space above the BANNER */
+}
