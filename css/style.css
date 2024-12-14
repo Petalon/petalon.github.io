@@ -49,8 +49,16 @@ body {
 }
 
 h1 {
+    font-size: 4rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: #ffffff; /* Bright yellow (gold-like) */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Adds subtle depth */
+    letter-spacing: 2px; /* Slight spacing for a clean look */
+    text-transform: uppercase;
+    /* Adjust size as needed 
     font-size: 3rem;
     margin: 20px 0;
+    */
 }
 
 .gif-container {
@@ -473,7 +481,7 @@ button:hover:before {
     appearance: none;
     width: 20px;
     height: 20px;
-    border: 2px solid #ffd700;
+    border: 2px solid #ffffff;
     border-radius: 4px;
     margin-right: 15px;
     background-color: transparent;
@@ -481,8 +489,8 @@ button:hover:before {
 }
 
 .roadmap-list input[type="checkbox"]:checked {
-    background-color: #ffd700;
-    border-color: #ffd700;
+    background-color: #ffffff;
+    border-color: #ffffff;
 }
 
 .roadmap-list span {
@@ -501,11 +509,10 @@ button:hover:before {
 .roadmap-title {
     font-size: 4rem; /* Adjust size as needed */
     font-weight: bold;
-    color: #ffd700; /* Bright yellow (gold-like) */
+    color: #ffffff; /* Bright yellow (gold-like) */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Adds subtle depth */
     letter-spacing: 2px; /* Slight spacing for a clean look */
     text-transform: uppercase;
-}
 }
 
  /* SOCIALS */
