@@ -444,6 +444,51 @@ button:hover:before {
     }
 }
 
+
+/* ROADMAP Section */
+.roadmap {
+    background-color: #f8f9fa; /* Light background */
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.roadmap h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.roadmap-checklist {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.roadmap-checklist li {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+    display: inline-block;
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+}
+
+.roadmap-checklist li.completed {
+    background-color: #d4edda; /* Light green for completed items */
+    color: #155724;
+    text-decoration: line-through;
+}
+
+.roadmap-checklist li:not(.completed) {
+    background-color: #f8d7da; /* Light red for pending items */
+    color: #721c24;
+}
+
+
  /* SOCIALS */
 .socials-section {
     margin-top: 20px;
@@ -464,3 +509,4 @@ button:hover:before {
 .socials-links img:hover {
     transform: scale(1.1); /* Adds a hover effect */
 }
+
