@@ -50,7 +50,8 @@ body {
 /*TITLE*/
 h1 {
     font-size: 6rem; /* Bigger title */
-    margin: 20px 0;
+    margin: 20px auto;
+    display: block;
     color: #ffffff; /* Fallback color */
     text-align: center;
     text-transform: uppercase; /* Gives the title a bold look */
