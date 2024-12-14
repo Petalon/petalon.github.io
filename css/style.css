@@ -542,27 +542,25 @@ button:hover:before {
 }
 
 /*TETETE*/
-.gold{
-   position: relative;
-   text-align: center; /* Centers the text horizontally */
-   transform: translate(-50%,-50%);
-   top: 50%;
-   left: 50%;
-   font-family: 'Times New Roman',serif;
+.gold {
+   position: fixed; /* Positions the element relative to the viewport */
+   top: 50%; /* Places it in the vertical center of the viewport */
+   left: 50%; /* Places it in the horizontal center of the viewport */
+   transform: translate(-50%, -50%); /* Centers the element perfectly */
+   font-family: 'Times New Roman', serif;
    letter-spacing: 5px;
    font-size: 150px;
    font-weight: bold;
    background-image: linear-gradient(
-	to right,
-	#462523 0,
-       	#cb9b51 22%, 
-	#f6e27a 45%,
-	#f6f2c0 50%,
-	#f6e27a 55%,
-	#cb9b51 78%,
-	#462523 100%
-	);
-   color:transparent;
-   -webkit-background-clip:text;
-
+       to right,
+       #462523 0,
+       #cb9b51 22%, 
+       #f6e27a 45%,
+       #f6f2c0 50%,
+       #f6e27a 55%,
+       #cb9b51 78%,
+       #462523 100%
+   );
+   color: transparent;
+   -webkit-background-clip: text; /* Ensures the gradient applies to the text */
 }
