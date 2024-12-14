@@ -49,38 +49,40 @@ body {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 5rem; /* Bigger title */
     margin: 20px 0;
-    color: #ffffff; /* White text */
+    color: #ffffff; /* Fallback color */
     text-align: center;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6), /* Subtle glow */
-                 0 0 10px rgba(255, 255, 255, 0.5); /* Extra depth */
-    animation: glow-fade 3s ease-in-out infinite alternate, 
-               fade-in 1.5s ease-out;
+    text-transform: uppercase; /* Gives the title a bold look */
+    background: linear-gradient(90deg, #ffdd00, #ffffff, #ffdd00); /* Gold-like gradient */
+    background-size: 200% auto; /* Makes the gradient animated */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Clips the text to the gradient */
+    animation: shine 3s infinite linear, fade-slide-in 1.5s ease-out;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.8);
 }
 
-/* Glow animation */
-@keyframes glow-fade {
+/* Shine effect for the gradient */
+@keyframes shine {
     0% {
-        text-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 0 0 10px rgba(255, 255, 255, 0.5);
+        background-position: 200% center;
     }
     100% {
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.6);
+        background-position: -200% center;
     }
 }
 
-/* Fade-in animation */
-@keyframes fade-in {
+/* Fade-slide-in for the entrance */
+@keyframes fade-slide-in {
     0% {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-50px);
     }
     100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
-
 h2 {
     font-size: 2rem; /* Adjust size as needed */
     font-weight: bold;
