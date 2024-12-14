@@ -555,6 +555,14 @@ $color-gold: 	#E8A95B;
 $color-gold--highlight: #F0BB7A;
 $color-gold--shadow: #DE9945;
 
+$background-gradient:
+	radial-gradient(
+		ellipse farthest-side at 40% 0%,
+		$color-dark--highlight 0%,
+		$color-dark 60%,
+		$color-dark--shadow 100%
+	);
+
 $gold-gradient:
 	radial-gradient(
 		ellipse farthest-corner at right bottom,
@@ -645,6 +653,12 @@ $decoration-gradient:
 	}
 }
 
+.container {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	max-width: 36rem;
+}
 
 .gold-text {
 	font-family: 'Alegreya', serif;
