@@ -121,14 +121,6 @@ h2 {
     width: 100%; /* Full width */
     overflow: hidden; /* Prevent overflow */
 }
-
-.memes-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: #ffffff; /* Optional: add text color */
-}
-
 /* Container for meme images */
 .memes-scroller {
     display: flex;
