@@ -47,9 +47,9 @@ body {
 .content {
     padding: 20px;
 }
-
+/*TITLE*/
 h1 {
-    font-size: 7rem; /* Bigger title */
+    font-size: 6rem; /* Bigger title */
     margin: 20px 0;
     color: #ffffff; /* Fallback color */
     text-align: center;
@@ -72,17 +72,7 @@ h1 {
     }
 }
 
-/* Fade-slide-in for the entrance */
-@keyframes fade-slide-in {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
 h2 {
     font-size: 2rem; /* Adjust size as needed */
     font-weight: bold;
