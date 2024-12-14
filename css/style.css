@@ -499,25 +499,15 @@ button:hover:before {
 }
 
 .roadmap-title {
-    font-size: 4rem; /* Adjust size */
+    font-size: 4rem; /* Adjust as needed */
     font-weight: bold;
-    text-align: center;
-    background: linear-gradient(
-        90deg,
-        #ffcc00 20%,
-        #ffd700 35%,
-        #fffacd 50%,
-        #ffd700 65%,
-        #ffcc00 80%
-    );
-    color: #ffd700;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 
-        0px 2px 4px rgba(0, 0, 0, 0.5),
-        0px -2px 4px rgba(255, 255, 255, 0.4);
-    margin: 20px 0;
     text-transform: uppercase;
+    background: linear-gradient(45deg, #d4af37, #f7e97e, #d4af37, #b8860b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    letter-spacing: 2px;
 }
 
  /* SOCIALS */
