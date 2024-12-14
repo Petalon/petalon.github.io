@@ -446,48 +446,64 @@ button:hover:before {
 
 
 /* ROADMAP Section */
-.roadmap {
-    background-color: #f8f9fa; /* Light background */
-    padding: 2rem;
-    border-radius: 10px;
-    margin: 2rem auto;
+.roadmap-section {
+    margin: 50px auto;
     text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1a1a1a; /* Dark background */
+    color: #f0f0f0; /* Soft white text */
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-.roadmap h2 {
+.roadmap-section h2 {
     font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 1.5rem;
+    color: #f7931a; /* Bitcoin-style orange for accent */
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
-.roadmap-checklist {
+.roadmap-list {
     list-style: none;
     padding: 0;
+}
+
+.roadmap-list li {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.roadmap-list input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f7931a;
+    border-radius: 4px;
+    margin-right: 15px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.roadmap-list input[type="checkbox"]:checked {
+    background-color: #f7931a;
+    border-color: #f7931a;
+}
+
+.roadmap-list span {
     font-size: 1.2rem;
 }
 
-.roadmap-checklist li {
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-    border-radius: 5px;
-    display: inline-block;
-    width: 100%;
-    max-width: 500px;
-    text-align: left;
-}
-
-.roadmap-checklist li.completed {
-    background-color: #d4edda; /* Light green for completed items */
-    color: #155724;
+.achieved span {
+    color: #77dd77; /* Green for achieved goals */
     text-decoration: line-through;
 }
 
-.roadmap-checklist li:not(.completed) {
-    background-color: #f8d7da; /* Light red for pending items */
-    color: #721c24;
+.pending span {
+    color: #ff6f61; /* Reddish for pending goals */
 }
-
 
  /* SOCIALS */
 .socials-section {
