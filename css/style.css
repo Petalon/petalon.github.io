@@ -550,8 +550,12 @@ button:hover:before {
    transform: translate(-50%, -50%); /* Centers the element perfectly */
    font-family: 'Times New Roman', serif;
    letter-spacing: 5px;
-   font-size: 150px;
    font-weight: bold;
+   font-size: 6rem; /* Adjust size as needed */
+   font-weight: bold;
+   text-align: center;
+    margin: 0;
+    padding: 0;
    background-image: linear-gradient(
        to right,
        #462523 0,
@@ -564,4 +568,12 @@ button:hover:before {
    );
    color: transparent;
    -webkit-background-clip: text; /* Ensures the gradient applies to the text */
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Adjust height based on your design */
+    margin: 0 auto;
 }
